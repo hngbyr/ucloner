@@ -1,24 +1,20 @@
-#summary One-sentence summary of this page.
-
-= Introduction =
+= 简介 =
 
 UCloner (原名 ubuntu-cloner ) 是针对 Ubuntu Linux 编写的一个系统备份、恢复、克隆及批量部署工具。
 图形界面,鼠标操作,简单易用。
 在 Ubuntu 9.04、9.10 中测试通过。理论上也可用于旧版 ubuntu 。
 
 
+= 使用方法 =
 
-= Details =
-
-
-                                     使用方法
 如果您使用的是 Ubuntu 或 Xubuntu:猛击 “双击运行”。若弹出对话框,选“运行”。
 如果您使用的是 Kubuntu: 打开终端,运行 sudo apt-get install python-gtk2 zenity python-vte;然后切
 换到 UCloner 目录,运行 sudo ./ucloner-gui.py 。
 
 
 
-                                     功能说明
+= 功能说明 =
+
 备份:
 将当前系统备份为一个映像文件。这点与 Ghost 不太一样。Ghost 一般是在另一个系统(如 DOS、
 WinPE 等)中备份非活动的 windows 系统。而 Linux 可以自己备份自己。Win7 也提供了类似的功能。
@@ -52,17 +48,20 @@ grub 安装位置提供三个选择:留空,“目标根分区”,或“目标根
 
 
 
-                                  已知问题
+= 已知问题 =
+
 1. 未格式化的分区不会出现在分区选择列表中。这是因为目前使用的 parted 不太容易处理未格式化分区
 的容量。用 fidsk 较容易处理,却不支持 gpt 。待以后改进。
 临时解决方法:运行 UCloner 之前,先将目标分区分好并格式化。此时的格式化,只是为了保证分区能
 够出现在选择列表中,因此,用哪种格式并不重要,fat、ntfs、ext2/3/4 等随便选一种即可。真正克隆
 或恢复时,还可以重新选择文件系统、格式化。
+
 2. 关于分区工具
 某些第三方分区工具不够“好”,比如,不给分区分配 UUID、创建的文件系统与 ubuntu 所用的版本不同,
 等等。如果是用第三方工具分的区,那么,到“选择用于...的文件系统”步骤时,最好选择“格式化为...” ;
 如果是用 ubuntu 自带的 gparted 分的区,则可以选择“不格式化,使用现有文件系统”。
 建议使用 ubuntu 自带的 Gparted (分区编辑器)。
+
 3. 关于 9.10 使用 reiserfs
 安装到硬盘的 ubuntu 9.10 没有 reiserfsprog,因此克隆时无法创建 reiserfs 文件系统。
 解决方法:手动安装 reiserfsprog 。
