@@ -5,6 +5,7 @@ UCloner (原名 ubuntu-cloner ) 是针对 Ubuntu Linux 编写的一个系统备�
 在 Ubuntu 9.04、9.10 中测试通过。理论上也可用于旧版 ubuntu 。
 
 
+
 = 使用方法 =
 
 如果您使用的是 Ubuntu 或 Xubuntu:猛击 “双击运行”。若弹出对话框,选“运行”。
@@ -13,15 +14,14 @@ sudo apt-get install python-gtk2 zenity python-vte`;然后切
 换到 UCloner 目录,运行`sudo ./ucloner-gui.py`。
 
 
-
 = 功能说明 =
 
 备份:
 将当前系统备份为一个映像文件。这点与 Ghost 不太一样。Ghost 一般是在另一个系统(如 DOS、
 WinPE 等)中备份非活动的 windows 系统。而 Linux 可以自己备份自己。Win7 也提供了类似的功能。
-备份时会自动排除常规挂载目录 /mnt 和 /media 。如果您设定了其它挂载点(如`/windows/* 、
-/home/*/win_c`之类),可手动指定排除之。
-还要注意某些可能含有大文件的缓存目录,如`/home/*/.aMule/Temp`等。如果您备份出的映像文件异
+备份时会自动排除常规挂载目录 /mnt 和 /media 。如果您设定了其它挂载点(如 /windows/`*` 、
+/home/`*`/win_c`之类),可手动指定排除之。
+还要注意某些可能含有大文件的缓存目录,如 /home/`*`/.aMule/Temp等。如果您备份出的映像文件异
 常的大,很可能是把下载到一半的电影也包进去了。
 备份为 squashfs 时,需先安装 squashfs-tools 。
 恢复:
