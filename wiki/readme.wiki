@@ -8,7 +8,8 @@ UCloner (原名 ubuntu-cloner ) 是针对 Ubuntu Linux 编写的一个系统备�
 = 使用方法 =
 
 如果您使用的是 Ubuntu 或 Xubuntu:猛击 “双击运行”。若弹出对话框,选“运行”。
-如果您使用的是 Kubuntu: 打开终端,运行`sudo apt-get install python-gtk2 zenity python-vte`;然后切
+如果您使用的是 Kubuntu: 打开终端,运行 
+sudo apt-get install python-gtk2 zenity python-vte`;然后切
 换到 UCloner 目录,运行`sudo ./ucloner-gui.py`。
 
 
@@ -28,17 +29,17 @@ WinPE 等)中备份非活动的 windows 系统。而 Linux 可以自己备份自
 统最好与备份系统的版本相同,否则可能导致恢复失败,或出现某些奇怪的问题。
 恢复的系统与原系统在分区配置上可以不同。UCloner 只提供了 3 个可选分区: / 、/home 和 swap。其
 中:
-* / 分区及其文件系统不可为空;
-* /home 、swap 分区可以留空;
-* swap 行第二个输入项无实际用途,只是为了看起来整齐;
+ * / 分区及其文件系统不可为空;
+ * /home 、swap 分区可以留空;
+ * swap 行第二个输入项无实际用途,只是为了看起来整齐;
 对于普通桌面用户,这三个分区足够了。不必盲目追随一些过时的教程。有些事有历史原因,比如,把 /
 boot 单独分区,是因为曾经 bios 不能访问硬盘 1024 柱面后的内容,因此要把 boot 放在硬盘靠前的部
 分。如今这问题早就不存在了。而把 /var 、/tmp 等单独分区,一般是用在服务器上,普通用户无此必
 要。
 grub 安装位置提供三个选择:留空,“目标根分区”,或“目标根分区所在硬盘”。
-* 如果留空,则不安装 grub。
-* 如果选“目标根分区”(如 /dev/sda5 ),将把 grub 安装到该分区的引导扇区。
-* 如果选“目标根分区所在硬盘”(如 /dev/sda ),将把 grub 安装到该硬盘 MBR。
+ * 如果留空,则不安装 grub。
+ * 如果选“目标根分区”(如 /dev/sda5 ),将把 grub 安装到该分区的引导扇区。
+ * 如果选“目标根分区所在硬盘”(如 /dev/sda ),将把 grub 安装到该硬盘 MBR。
 新主机名可以留空。留空则保持原主机名。
 
 
